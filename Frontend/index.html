@@ -3,94 +3,485 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeAlpha Store</title>
-    <link rel="stylesheet" href="css/style.css">
-    <!-- Font Awesome for icons -->
+    <title>CapitalShop - Fashion E-commerce Store</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <!-- Navigation Bar -->
-    <nav class="navbar">
-        <div class="logo">
-            <h1>CodeAlpha Store</h1>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="top-contact">
+                        <span><i class="fas fa-phone"></i> +1 234 567 890</span>
+                        <span class="ms-3"><i class="fas fa-envelope"></i> info@capitalshop.com</span>
+                    </div>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="top-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="#products">Products</a>
-            <a href="#" id="cart-icon">
-                <i class="fas fa-shopping-cart"></i>
-                <span id="cart-count">0</span>
-            </a>
-            <a href="#" id="login-btn">Login</a>
+    </div>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-3">
+                    <div class="logo">
+                        <h1>CapitalShop</h1>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <button class="mobile-menu-btn d-lg-none">
+    <i class="fas fa-bars"></i>
+</button>
+                    <ul class="nav-menu">
+                        <li><a href="#" class="active">Home</a></li>
+                        <li><a href="#">Men</a></li>
+                        <li><a href="#">Women</a></li>
+                        <li><a href="#">Baby Collection</a></li>
+                        <li><a href="#">Pages</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <div class="nav-icons">
+                        <a href="#" class="search-icon"><i class="fas fa-search"></i></a>
+                        <a href="#" class="user-icon"><i class="fas fa-user"></i></a>
+                        <a href="#" class="cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count">0</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="hero-content">
-            <h1>Welcome to CodeAlpha Store</h1>
-            <p>Discover amazing products at great prices</p>
-            <a href="#products" class="cta-button">Shop Now</a>
+    <!-- Hero Slider -->
+<section class="hero-slider">
+    <div class="slide active">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <div class="hero-content">
+                        <h6 class="animate-on-scroll">Summer Collection</h6>
+                        <h1 class="animate-on-scroll">Fall - Winter<br>Collection 2024</h1>
+                        <p class="animate-on-scroll">A specialist label creating luxury essentials. Ethically crafted with an unwavering commitment to exceptional quality.</p>
+                        <a href="#" class="btn btn-primary animate-on-scroll">Shop Now</a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="hero-image animate-on-scroll">
+                        <img src="https://img.freepik.com/free-photo/stylish-woman-summer-outfit-isolated-posing-fashion-trend-isolated_285396-472.jpg" alt="Hero Image" class="img-fluid">
+                    </div>
+                </div>
+            </div>
         </div>
-    </header>
+    </div>
+</section>
 
-    <!-- Products Section -->
-    <section id="products" class="products-section">
-        <h2>Our Products</h2>
-        <div class="products-grid" id="products-container">
-            <!-- Products will be dynamically loaded here -->
+    <!-- Categories Section -->
+<section class="categories-section py-5">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2>Shop By Category</h2>
+            <p>Select from the premium product brands and save plenty money</p>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="category-card animate-on-scroll">
+                    <img src="https://img.freepik.com/free-photo/handsome-confident-smiling-man-with-hands-crossed-chest_176420-18743.jpg" alt="Men's Fashion" class="img-fluid">
+                    <div class="category-overlay">
+                        <h3>Men's Fashion</h3>
+                        <a href="#" class="btn btn-light">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category-card animate-on-scroll">
+                    <img src="https://img.freepik.com/free-photo/full-length-portrait-happy-excited-girl-bright-colorful-clothes-holding-shopping-bags-while-standing-showing-peace-gesture-isolated_231208-5946.jpg" alt="Women's Fashion" class="img-fluid">
+                    <div class="category-overlay">
+                        <h3>Women's Fashion</h3>
+                        <a href="#" class="btn btn-light">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="category-card animate-on-scroll">
+                    <img src="https://img.freepik.com/free-photo/small-girl-stands-pink-dress_8353-5378.jpg" alt="Kid's Fashion" class="img-fluid">
+                    <div class="category-overlay">
+                        <h3>Kid's Fashion</h3>
+                        <a href="#" class="btn btn-light">Shop Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Featured Products -->
+<section class="featured-products py-5">
+    <div class="container">
+        <div class="section-title text-center mb-5">
+            <h2>Featured Products</h2>
+            <p>All the latest picked from designer of our store</p>
+        </div>
+        <div class="row">
+            <!-- Product Card 1 -->
+            <div class="col-md-3">
+                <div class="product-card animate-on-scroll">
+                    <div class="product-image">
+                        <img src="https://img.freepik.com/free-photo/white-t-shirt-men-s-wear-with-design-space_53876-104920.jpg" alt="Product 1" class="img-fluid">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-quick-view"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#" class="btn-wishlist"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Casual T-Shirt</h4>
+                        <div class="price">$29.00</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 2 -->
+            <div class="col-md-3">
+                <div class="product-card animate-on-scroll">
+                    <div class="product-image">
+                        <img src="https://img.freepik.com/free-photo/blue-denim-jacket-apparel-shoot-with-design-space_53876-102181.jpg" alt="Product 2" class="img-fluid">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-quick-view"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#" class="btn-wishlist"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Denim Jacket</h4>
+                        <div class="price">$89.00</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 3 -->
+            <div class="col-md-3">
+                <div class="product-card animate-on-scroll">
+                    <div class="product-image">
+                        <img src="https://img.freepik.com/free-photo/elegant-watch-with-silver-golden-chain-isolated_181624-27080.jpg" alt="Product 3" class="img-fluid">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-quick-view"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#" class="btn-wishlist"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Luxury Watch</h4>
+                        <div class="price">$199.00</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Product Card 4 -->
+            <div class="col-md-3">
+                <div class="product-card animate-on-scroll">
+                    <div class="product-image">
+                        <img src="https://img.freepik.com/free-photo/new-pair-white-sneakers-isolated-white_125540-1795.jpg" alt="Product 4" class="img-fluid">
+                        <div class="product-overlay">
+                            <a href="#" class="btn-quick-view"><i class="fas fa-eye"></i></a>
+                            <a href="#" class="btn-add-to-cart"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="#" class="btn-wishlist"><i class="fas fa-heart"></i></a>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h4>Sport Sneakers</h4>
+                        <div class="price">$79.00</div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Special Offer -->
+<section class="special-offer py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="offer-content animate-on-scroll">
+                    <h6>Deal of the week</h6>
+                    <h2>Special Weekly Offer</h2>
+                    <p>Get 20% Off on selected items</p>
+                    <div class="countdown">
+                        <div id="timer">
+                            <!-- Countdown timer will be inserted by JavaScript -->
+                        </div>
+                    </div>
+                    <a href="#" class="btn btn-primary">Shop Now</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="offer-image animate-on-scroll">
+                    <img src="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg" alt="Special Offer" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Newsletter -->
+    <section class="newsletter py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <div class="newsletter-content animate-on-scroll">
+                        <h2>Subscribe to our Newsletter</h2>
+                        <p>Subscribe to our newsletter and get 20% off your first purchase</p>
+                        <form class="newsletter-form">
+                            <div class="input-group">
+                                <input type="email" class="form-control" placeholder="Your email address">
+                                <button class="btn btn-primary">Subscribe</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- Shopping Cart Modal -->
-    <div id="cart-modal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Your Cart</h2>
-            <div id="cart-items">
-                <!-- Cart items will be displayed here -->
-            </div>
-            <div class="cart-total">
-                <h3>Total: $<span id="cart-total">0</span></h3>
-                <button id="checkout-btn">Checkout</button>
+  <!-- Footer -->
+<footer class="footer">
+    <!-- Footer Newsletter -->
+    <div class="footer-newsletter py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h4><i class="fas fa-envelope-open-text"></i> Stay Updated with Latest Offers</h4>
+                    <p class="mb-0">Subscribe and get notified about new products and exclusive offers</p>
+                </div>
+                <div class="col-md-6">
+                    <form class="footer-subscribe">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email">
+                            <button class="btn btn-primary">Subscribe <i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- Login Modal -->
-    <div id="login-modal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="document.getElementById('login-modal').style.display='none'">&times;</span>
-        <h2>Login</h2>
-        <form id="login-form" onsubmit="handleLogin(event)">
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Login</button>
-        </form>
-        <p>Don't have an account? <a href="#" onclick="showRegisterModal()">Register</a></p>
-    </div>
-</div>
-    <!-- Add this after your login modal -->
-<div id="register-modal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="document.getElementById('register-modal').style.display='none'">&times;</span>
-        <h2>Register</h2>
-        <form id="register-form" onsubmit="handleRegistration(event)">
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email" required>
-            <input type="password" name="password" placeholder="Password" required>
-            <button type="submit">Register</button>
-        </form>
-        <p>Already have an account? <a href="#" onclick="showLoginModal()">Login</a></p>
-    </div>
-</div>
+    <!-- Main Footer -->
+    <div class="footer-main bg-dark text-light py-5">
+        <div class="container">
+            <!-- Footer Top -->
+            <div class="row">
+                <!-- About Section -->
+                <div class="col-lg-4 mb-4">
+                    <div class="footer-about">
+                        <h3 class="footer-title">About CapitalShop</h3>
+                        <img src="path-to-your-logo.png" alt="CapitalShop" class="footer-logo mb-3">
+                        <p>Your premier destination for fashion and lifestyle. We bring you the latest trends with unmatched quality and style.</p>
+                        <div class="social-links">
+                            <a href="#" class="facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="pinterest"><i class="fab fa-pinterest"></i></a>
+                            <a href="#" class="youtube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
 
-    <footer>
-        <p>&copy; 2025 CodeAlpha Store. All rights reserved.</p>
-    </footer>
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Our Services</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Shop Now</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Blog</a></li>
+                        <li><a href="#"><i class="fas fa-angle-right"></i> Contact Us</a></li>
+                    </ul>
+                </div>
 
+                <!-- Customer Service -->
+                <div class="col-lg-2 col-md-4 mb-4">
+                    <h3 class="footer-title">Customer Service</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-user"></i> My Account</a></li>
+                        <li><a href="#"><i class="fas fa-shopping-cart"></i> Order History</a></li>
+                        <li><a href="#"><i class="fas fa-heart"></i> Wishlist</a></li>
+                        <li><a href="#"><i class="fas fa-truck"></i> Track Order</a></li>
+                        <li><a href="#"><i class="fas fa-question-circle"></i> Help Center</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-4 col-md-4 mb-4">
+                    <h3 class="footer-title">Contact Information</h3>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Our Location</h4>
+                                <p>123 Fashion Street, New York, NY 10001, United States</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Call Us 24/7</h4>
+                                <p>Hotline: +1 234 567 890</p>
+                                <p>Support: +1 234 567 891</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email Us</h4>
+                                <p>sales@capitalshop.com</p>
+                                <p>support@capitalshop.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Middle - Features -->
+            <div class="row footer-features mt-4 pt-4 border-top border-secondary">
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="feature-item">
+                        <i class="fas fa-truck"></i>
+                        <h4>Free Shipping</h4>
+                        <p>For orders over $100</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="feature-item">
+                        <i class="fas fa-undo"></i>
+                        <h4>Easy Returns</h4>
+                        <p>30 days return policy</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="feature-item">
+                        <i class="fas fa-lock"></i>
+                        <h4>Secure Payment</h4>
+                        <p>100% secure checkout</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-3">
+                    <div class="feature-item">
+                        <i class="fas fa-headset"></i>
+                        <h4>24/7 Support</h4>
+                        <p>Dedicated support</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom - Apps & Payment -->
+            <div class="row footer-bottom mt-4 pt-4 border-top border-secondary">
+                <div class="col-md-6 mb-3">
+                    <h4 class="mb-3">Download Our Mobile App</h4>
+                    <div class="app-buttons">
+                        <a href="#" class="app-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" 
+                                 alt="App Store" class="img-fluid">
+                        </a>
+                        <a href="#" class="app-btn">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
+                                 alt="Google Play" class="img-fluid">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <h4 class="mb-3">We Accept</h4>
+                    <div class="payment-methods">
+                        <img src="https://img.freepik.com/free-vector/payment-methods-collection_23-2147697155.jpg" 
+                             alt="Payment Methods" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Copyright Bar -->
+    <div class="copyright py-3">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0">© 2024 CapitalShop. All rights reserved. Designed with <i class="fas fa-heart text-danger"></i> by DevTeam</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <ul class="footer-bottom-links">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <!-- Copyright -->
+    <div class="copyright py-3 bg-dark text-light border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="mb-0">&copy; 2024 CapitalShop. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <img src="images/payment-methods.png" alt="Payment Methods" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
-    <script src="js/cart.js"></script>
     <script src="js/auth.js"></script>
+    <script src="js/cart.js"></script>
 </body>
 </html>

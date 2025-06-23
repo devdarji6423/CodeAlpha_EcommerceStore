@@ -159,3 +159,26 @@ function handleLogout() {
     updateLoginStatus();
     alert('Logged out successfully');
 }
+// Form validation
+const validateForm = (formData) => {
+    const errors = {};
+    
+    if (!formData.email || !formData.email.includes('@')) {
+        errors.email = 'Please enter a valid email address';
+    }
+    
+    if (!formData.password || formData.password.length < 6) {
+        errors.password = 'Password must be at least 6 characters long';
+    }
+    
+    return errors;
+};
+
+// Show error messages
+const showError = (message) => {
+    const errorDiv = document.createElement('div');
+    errorDiv.className = 'error-message';
+    errorDiv.textContent = message;
+    errorDiv.style.animation = 'fadeIn 0.3s ease';
+    return errorDiv;
+};

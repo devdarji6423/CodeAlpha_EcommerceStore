@@ -1,4 +1,4 @@
-let cart = [];
+// let cart = []; // Removed to avoid redeclaration error
 
 // Add to cart function
 function addToCart(productId) {
@@ -137,3 +137,33 @@ document.addEventListener('DOMContentLoaded', () => {
         alert('Proceeding to checkout...');
     });
 });
+class Cart {
+    constructor() {
+        this.items = [];
+        this.total = 0;
+    }
+
+    addItem(product) {
+        this.items.push(product);
+        this.updateTotal();
+        this.updateCartUI();
+    }
+
+    removeItem(productId) {
+        this.items = this.items.filter(item => item.id !== productId);
+        this.updateTotal();
+        this.updateCartUI();
+    }
+
+    updateTotal() {
+        this.total = this.items.reduce((sum, item) => sum + item.price, 0);
+    }
+
+    updateCartUI() {
+        const cartCount = document.querySelector('.cart-count');
+        cartCount.textContent = this.items.length;
+        cartCount.style.animation = 'fadeIn 0.3s ease';
+    }
+}
+
+const cart = new Cart();
